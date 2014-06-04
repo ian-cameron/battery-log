@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Label:</strong>
+  <%= @battery.label %>
+</p>
+
+<p>
+  <strong>Dob:</strong>
+  <%= @battery.dob %>
+</p>
+
+<p>
+  <strong>Dod:</strong>
+  <%= @battery.dod %>
+</p>
+
+<p>
+  <strong>Client:</strong>
+  <%= @battery.client_id %>
+</p>
+
+<p>
+  <strong>Capacity:</strong>
+  <%= @battery.capacity %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @battery.model %>
+</p>
+
+<%= link_to 'Edit', edit_battery_path(@battery) %> |
+<%= link_to 'Back', batteries_path %>

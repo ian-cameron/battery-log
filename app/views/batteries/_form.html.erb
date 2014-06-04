@@ -1,0 +1,41 @@
+<%= form_for(@battery) do |f| %>
+  <% if @battery.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@battery.errors.count, "error") %> prohibited this battery from being saved:</h2>
+
+      <ul>
+      <% @battery.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :label %><br>
+    <%= f.text_field :label %>
+  </div>
+  <div class="field">
+    <%= f.label :dob %><br>
+    <%= f.date_select :dob %>
+  </div>
+  <div class="field">
+    <%= f.label :dod %><br>
+    <%= f.date_select :dod %>
+  </div>
+  <div class="field">
+    <%= f.label :client_id %><br>
+    <%= f.text_field :client_id %>
+  </div>
+  <div class="field">
+    <%= f.label :capacity %><br>
+    <%= f.text_field :capacity %>
+  </div>
+  <div class="field">
+    <%= f.label :model %><br>
+    <%= f.text_field :model %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Battery:</strong>
+  <%= @deployment.battery_id %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @deployment.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @deployment.end_date %>
+</p>
+
+<p>
+  <strong>Job:</strong>
+  <%= @deployment.job_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @deployment.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_deployment_path(@deployment) %> |
+<%= link_to 'Back', deployments_path %>
