@@ -3,4 +3,6 @@ class User < ActiveRecord::Base
   has_many :charges
   has_many :deployments
   has_many :jobs, through: :deployments
+  
+  validates :password, confirmation: true
 end
